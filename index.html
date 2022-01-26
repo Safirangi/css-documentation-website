@@ -1,0 +1,906 @@
+<head>
+  <title>CSS Documentation</title>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</head>
+
+<body>
+  <nav class="navbar" id="navbar">
+    <header>CSS Documentation</header>
+    <ul>
+      <li><a href="#CSS:_Cascading_Style_Sheets" class="nav-link">CSS: Cascading Style Sheets</a></li>
+      <li><a href="#CSS_Selectors" class="nav-link">CSS Selectors</a></li>
+      <li><a href="#CSS_Colors" class="nav-link">CSS Colors</a></li>
+      <li><a href="#CSS_Background_Property" class="nav-link">CSS Background Property</a></li>
+      <li><a href="#Position" class="nav-link">Position</a></li>
+      <li><a href="#Typography" class="nav-link">Typography</a></li>
+      <li><a href="#Border" class="nav-link">Border</a></li>
+      <li><a href="#Box_Shadows" class="nav-link">Box Shadows</a></li>
+      <li><a href="#CSS_Root" class="nav-link">CSS Root</a></li>
+      <li><a href="#CSS_Units" class="nav-link">CSS Units</a></li>
+      <li><a href="#Transition" class="nav-link">Transition</a></li>
+      <li><a href="#Box_Model" class="nav-link">Box Model</a></li>
+      <li><a href="#Changing_Box_Model" class="nav-link">Changing Box Model</a></li>
+      <li><a href="#FlexBox" class="nav-link">FlexBox</a></li>
+      <li><a href="#Grids" class="nav-link">Grids</a></li>
+      <li><a href="#Media_Queries" class="nav-link">Media Queries</a></li>
+    </ul>
+  </nav>
+
+  
+<main id="main-doc">
+  
+<section class="main-section" id="CSS:_Cascading_Style_Sheets">
+  <header>CSS: Cascading Style Sheets</header><br>
+    <p>CSS stands for Cascading Style Sheets. It is a style sheet language which is used to describe the look and formatting of a document written in markup language. It provides an additional feature to HTML. It is generally used with HTML to change the style of web pages and user interfaces. It can also be used with any kind of XML documents including plain XML, SVG and XUL.
+    CSS is used along with HTML and JavaScript in most websites to create user interfaces for web applications and user interfaces for many mobile applications.</p>
+<br>
+  <h3>CSS Syntax</h3><br>
+    <p>The basic anatomy of CSS syntax written for both inline styles and stylesheets.Some commonly used CSS terms, such as ruleset, selector, and declaration.</p>
+<br>
+  <h4>Inline Styles</h4><br>
+    <p>CSS inline styles can be written inside the opening HTML tag using the style attribute.Inline styles can be used to style HTML, but it is not the best practice.</p>
+    <p><code> &ltp style='color: red; font-size: 20px;'&gtI'm learning to code! &lt/p&gt
+    </code></p>
+<br>
+  <h4>Internal Stylesheet</h4><br>
+    <p>An internal stylesheet is written using the style element inside the head element of an HTML file.Internal stylesheets can be used 
+      to style HTML but are also not best practice.</p>
+<br>
+  <h4>External Stylesheet</h4><br>
+    <p>An external stylesheet separates CSS code from HTML, by using the “.css”.file extension.External stylesheets are the best approach when it comes to 
+      using HTML and CSS. External stylesheets are linked to HTML using the <link> element.</p><br>
+</section>
+  
+<section class="main-section" id="CSS_Selectors">
+<header>CSS Selectors</header><br>
+  <p>CSS selectors are used to select the content you want to style. Selectors are the part of CSS rule set. CSS selectors select HTML elements according to its id, class, type, attribute etc.</p>
+  <p>There are several different types of selectors in CSS: <br>
+  <ul><br>
+    <li><h3>CSS Element Selector</h3>
+      <p>The element selector selects the HTML element by name.</p>
+      <p><code>p{  <br>
+        text-align: center;  <br>
+        color: blue;  <br>
+        }   </code><br></p>
+    </li>
+  
+    <li><h3>CSS Id Selector</h3>
+      <p>The Id selector selects the id attribute of an HTML element to select a specific element. An id is always unique within the page so it is chosen to select a single, unique element.It is written with the hash character (#), followed by the id of the element.</p>
+      <p><code>#para1 {  <br>
+        text-align: center; <br> 
+        color: blue;  <br>
+        }  <br></code></p>
+    </li>
+  
+    <li><h3>CSS Class Selector: </h3>
+      <p>The class selector selects HTML elements with a specific class attribute. It is used with a period character '.' (full stop symbol) followed by the class name.</p>
+      <p><code>&ltp class='brand'&gt Sole Shoe Company &lt/p&gt</code>
+      <code>.brand {<br>
+      }
+      </code>
+    </li>
+  
+    <li><h3>CSS Universal Selector: </h3>
+      <p>The Universal Selector selects all elements of any type. It uses the * character in the same place where you specified the type selector in a ruleset, like so:<br>
+      <code>
+        * { <br>
+        font-family: Verdana; <br>
+        }</code>
+     </p></li>
+
+    <li><h3>CSS Group Selector: </h3>
+      <p>The grouping selector is used to select all the elements with the same style definitions.Grouping selector is used to minimize the code. Commas are used to separate each selector in grouping.</p>
+      <p><code>h1, h2, p {  <br>
+        text-align: center;  <br>
+        color: blue;  <br>
+        }  <br></code></p>
+    </li> 
+  
+</ul>
+</p>
+</section>
+
+<section id="CSS_Colors" class="main-section">
+<header>CSS Colors</header><br>
+<p>Colors in CSS can be described in three different ways:
+<ul>
+<li>Named colors — English words that describe colors, also called keyword colors</li>
+<li>RGB — numeric values that describe a mix of red, green, and blue</li>
+<li>HSL — numeric values that describe a mix of hue, saturation, and lightness</li>
+</ul></p><br>
+
+<h3>Hexadecimal</h3>
+<p>A hex color begins with a hash character (#) which is followed by three or six characters. The characters represent values for red, blue and green. The hexadecimal number system has 16 digits (0-15) instead of 10 (0-9) like in the standard decimal system. To represent 10-15, we use A-F.</p>
+<br>
+<h3>RGB Colors</h3>
+<p>There is another syntax for representing RGB values, commonly referred to as “RGB value” or just “RGB”, that uses decimal numbers rather than hexadecimal numbers, and it looks like this:
+<code>h1 {  <br>
+  color: rgb(23, 45, 23); <br>
+  }<br></code>
+</p>
+<br>
+<h3>Hue, Saturation, and Lightness</h3>
+<p>The syntax for HSL is similar to the decimal form of RGB. The first number represents the degree of the hue, and can be between 0 and 360. The second and third numbers are percentages representing saturation and lightness respectively. Here is an example:</p>
+<code>color: hsl(120, 60%, 70%);</code><br>
+
+<p><i>Hue</i> is the first number. It refers to an angle on a color wheel. Red is 0 degrees, Green is 120 degrees, Blue is 240 degrees, and then back to Red at 360. You can see an example of a color wheel below.</p>
+
+<p><i>Saturation</i> refers to the intensity or purity of the color. The saturation increases towards 100% as the color becomes richer. The saturation decreases towards 0% as the color becomes grayer.</p>
+
+<p><i>Lightness</i> refers to how light or dark the color is. Halfway, or 50%, is normal lightness. Imagine a sliding dimmer on a light switch that starts halfway. Sliding the dimmer up towards 100% makes the color lighter, closer to white. Sliding the dimmer down towards 0% makes the color darker, closer to black.</p>
+<br>
+<h3>Opacity and Alpha</h3>
+  <p><code>color: hsla(34, 100%, 50%, 0.1);</code><br>
+The first three values work the same as hsl. The fourth value is the alpha. This last value is sometimes called opacity.</p>
+  <p><i>Alpha</i> is a decimal number from zero to one. If alpha is zero, the color will be completely transparent. If alpha is one, the color will be opaque. The value for half-transparent would be 0.5.</p>
+  <code>color: rgba(234, 45, 98, 0.33);</code><br>
+ 
+<p>By adding a two-digit hexadecimal value to the end of the six-digit representation (#52BC8280), or a one-digit hexadecimal value to the end of the three-digit representation (#F003), you can change the opacity of a hexadecimal color. Hex opacity ranges from 00 (transparent) to FF (opaque).
+  Alpha can only be used with HSL, RGB, and hex colors.</p>
+<br>
+  <h3>Gradient</h3>
+<p>CSS provides the ability to use color transitions, otherwise known as gradients, on elements. This is accessed through the background property's linear-gradient() function. Here is the general syntax:</p>
+
+  <code>background:linear-gradient(gradient_direction,color 1,color 2,color 3,...);</code><br>
+<p>The first argument specifies the direction from which color transition starts - it can be stated as a degree, where 90deg makes a horizontal gradient (from left to right) and 45deg makes a diagonal gradient (from bottom left to top right). The following arguments specify the order of colors used in the gradient. Example:</p>
+  <code>background:linear-gradient(90deg,red,yellow,rgb(204,204,255));</code><br>
+<br>
+</section>
+  
+<section id="CSS_Background_Property" class="main-section">
+<header>CSS Background Property</header><br>
+<h3>CSS background-color</h3>
+<p>The background-color property is used to specify the background color of the element.<br>
+<code>h2, p {  <br>
+    background-color: #b0d4de;  <br>
+  }  <br></code></p>
+<br>
+<h3>CSS background-image</h3>
+<p>The background-image property is used to set an image as a background of an element. By default the image covers the entire element.<br>
+<code>body {  <br>
+background-image: url("paper1.gif"); <br> 
+  }  <br></code></p>
+<br>
+<h3>CSS background-repeat</h3>
+<p>By default, the background-image property repeats the background image horizontally and vertically. Some images are repeated only horizontally or vertically.
+<code>
+body {  <br>
+    background-image: url("gradient_bg.png");  <br>
+    background-repeat: repeat-x;  <br>
+  }  <br></code></p>
+<br>
+<h3>background-attachment</h3>
+<p>The background-attachment property is used to specify if the background image is fixed or scroll with the rest of the page in browser window. If you set fixed the background image then the image will not move during scrolling in the browser.<br>
+  <code>background-attachment: fixed;  </code></p>
+<br>
+  <h3>background-position</h3>
+<p>The background-position property is used to define the initial position of the background image. By default, the background image is placed on the top-left of the webpage. You can set the following positions:
+<ul>
+  <li>center</li>
+  <li>top</li>
+  <li>bottom</li>
+  <li>left</li>
+  <li>right</li>
+</ul><br>
+  <code>background-position: center;  <br>
+  .background { <br>
+  background: #efefef url('') no-repeat fixed center;  <br>
+}  <br></code></p>
+<br>
+</section>
+  
+<section id="Position" class="main-section">
+<header>Position</header><br>
+  <h3>Position</h3>
+  <br>
+<p>Block-level elements like these boxes create a block the full width of their parent elements, and they prevent other elements from appearing in the same horizontal space. The default position of an element can be changed by setting its position property. The position property can take one of five values: <br>
+<ul>
+  <li>static: setting position to static does nothing. That’s because static simply refers to the default behavior.</li>
+  <li>relative: This value allows you to position an element relative to its default static position on the web page.<br>
+<code>.green-box {  <br>
+  background-color: green;  <br>
+  position: relative; <br>
+  }<br></code></li>
+  <li>absolute: When an element’s position is set to absolute, all other elements on the page will ignore the element and act like it is not present on the page. The element will be positioned relative to its closest positioned parent element, while offset properties can be used to determine the final position from there. <br>
+</li>
+  <li>fixed: When an element’s position is set to absolute, the element will scroll with the rest of the document when a user scrolls.<br>
+</li>
+  <li>sticky: The sticky value is another position value that keeps an element in the document flow as the user scrolls, but sticks to a specified position as the page is scrolled further. </li><br></p>
+<br>
+  <h3>Z-Index</h3>
+  <br>
+<p>The z-index property controls how far back or how far forward an element should appear on the web page when elements overlap. This can be thought of as the depth of elements, with deeper elements appearing behind shallower elements.
+The z-index property accepts integer values. Depending on their values, the integers instruct the browser on the order in which elements should be layered on the web page.</p>
+<code>.blue-box { <br>
+  background-color: blue; <br>
+}<br>
+ <br>
+.green-box { <br>
+  background-color: green;  <br>
+  position: relative; <br>
+  top: -170px;  <br>
+  left: 170px;  <br>
+} <br>
+  </code>
+<br>
+  <h3>Float</h3>
+<br>
+<p>The float property is commonly used for wrapping text around an image while moving elements left and right for layout purposes is better left to tools like CSS grid and flexbox. 
+The float property is often set using one of the values below: <br>
+<ul>
+  <li>left - moves, or floats, elements as far left as possible.</li>
+  <li>right - moves elements as far right as possible.</li>
+</ul>
+<br>
+</section>
+  
+<section id="Typography" class="main-section">
+<header>Typography</header><br>
+<p>Typography is the art of arranging text on a page.</p>
+<br>
+<h3>font-family</h3>
+<p>When specifying a typeface with multiple words, like Times New Roman, it is recommended to use quotation marks (' ') to group the words together, like so:
+<code>h1 {  <br>
+  font-family: 'Times New Roman'; <br>
+  } </code><br>
+</p>
+<br>
+<h3>Font Weight</h3>
+<p>In CSS, the font-weight property controls how bold or thin text appears. It can be specified with keywords or numerical values.
+The font-weight property can take any one of these keyword values:
+<ul>
+  <li><i>bold</i>: Bold font weight.</li>
+  <li><i>normal</i>: Normal font weight. This is the default value.</li>
+  <li><i>lighter</i>: One font weight lighter than the element’s parent value.</li>
+  <li><i>bolder</i>: One font weight bolder than the element’s parent value.</li>
+  </ul></p>
+<p>Numerical values can range from 1 (lightest) to 1000 (boldest), but it is common practice to use increments of 100. A font weight of 400 is equal to the keyword value normal, and a font weight of 700 is equal to bold.</p>
+<br>
+<h3>Font Style</h3>
+<p>You can also italicize text with the font-style property.
+<code>h3 {  <br>
+  font-style: italic; <br>
+  } <br></code>
+The italic value causes text to appear in italics. The font-style property also has a normal value which is the default.</p>
+<br>
+<h3>Text Transformation</h3>
+<p>Text can also be styled to appear in either all uppercase or lowercase with the text-transform property.
+<code>h1 {  <br>
+  text-transform: uppercase;  <br>
+  } <br></code></p>
+<br>
+<h3>Letter Spacing</h3>
+<p>The letter-spacing property is used to set the horizontal spacing between the individual characters in an element. The letter-spacing property takes length values in units, such as 2px or 0.5em.
+<code>p { <br>
+  letter-spacing: 2px;  <br>
+  } <br></code></p>
+<br>
+<h3>Word Spacing</h3>
+<p>It is used to set the space between words with the word-spacing property. The word-spacing property also takes length values in units, such as 3px or 0.2em.
+<code>h1 {  <br>
+  word-spacing: 0.3em;  <br>
+} <br>
+<br></code></p>
+<h3>Line Height</h3>
+<p>We can use the line-height property to set how tall we want each line containing our text to be. Line height values can be a unitless number, such as 1.2, or a length value, such as 12px, 5% or 2em.
+<code>p { <br>
+  line-height: 1.4; <br>
+  } <br></code></p>
+<p>Generally, the unitless value is preferred since it is responsive based on the current font size. In other words, if the line-height is specified by a unitless number, changing the font size will automatically readjust the line height.</p>
+<br>
+<h3>Text Alignment</h3>
+<p>This property aligns the text with values such as left, right, center, or justify.
+<code>h1 {  <br>
+  text-align: right;  <br>
+  } <br></code></p>
+<br>
+</section>
+
+<section id="Border" class="main-section">
+<header>Border</header>
+  <br>
+<p>The CSS border properties are use to specify the style, color and size of the border of an element. The CSS border properties are given below
+<ul>
+  <li><i>border-style</i>: This style property is used to specify the border type which you want to display on the web page.<br>
+    <code>p.solid {border-style: solid;}  </code>
+  </li>
+  <br>
+  <li><i>border-color</i>: This property is used to set border color.<br>
+    <code>p.one {  <br>
+    border-style: solid;  <br>
+    border-width: 5px; <br>
+    border-color: red;  <br>
+      }  <br></code>
+  </li>
+  <br>
+  <li><i>border-width</i>: The border-width property is used to set the border's width. It is set in pixels. You can also use the one of the three pre-defined values, thin, medium or thick to set the width of the border.</li>
+  <br>
+  <li><i>border-radius</i>: <p>This property sets the rounded borders and provides the rounded corners around an element, tags, or div. It defines the radius of the corners of an element.
+It is shorthand for border top-left-radius, border-top-right-radius, border-bottom-right-radius and border-bottom-left-radius. We can specify the border for all four corners of the box in a single declaration using the border-radius. The values of this property can be defined in percentage or length units.</p>
+    <p><code>border-radius: 30px;</code> // it will set all corners to the same value.</p><br>
+    <p><code>border-radius: 20% 10% ;</code> // first value will be used for the top-left and bottom-right corners, and the second value for the top-right and bottom-left corners.</p><br>
+    <p><code> border-radius: 10% 30% 20%;</code> // first value will be used for the top-left corner, the second value will be applied on top-right, and bottom-left corners and the third value will be applied to the bottom-right corner.</p><br>
+    <p><code>(border-radius: 10% 30% 20% 40%;) </code> // first value will be the radius of top-left, the second value will be used for the top-right, the third value will be applied on bottom-right, and the fourth value is used for bottom-left.</p>
+</li>
+</ul>
+<br>
+</section>
+  
+<section id="Box_Shadows" class="main-section">
+<header>Box Shadows</header>
+<br>
+<p>The box-shadow property applies one or more shadows to an element. The box-shadow property takes values for:
+  <ul>
+<br>
+    <li><i>offset-x</i>:  It horizontally sets the shadow position. Its positive value will set the shadow to the right side of the box. Its negative value is used to set the shadow on the left side of the box.</li>
+<br>
+    <li><i>offset-y</i>:  It is used to set the shadow position vertically. The positive value in it sets the shadow below the box, and the negative value sets the shadow above of the box.<li>
+<br>
+    <li><i>blur-radius</i>:  It is used to blur the box-shadow.</li>
+<br>
+    <li><i>spread-radius</i>: It sets the shadow size. The spread size depends upon the spread value.</li>
+<br>
+    <li><i>color</i>: This attribute is used to set the color of the shadow.</li>
+<br>
+    <li><i>inset</i>: Normally, the shadow generates outside of the box, but by using inset, the shadow can be created within the box.</li>
+<br>
+    <li><i>inherit</i>: It is inherited from the parent element.</li>
+<br>
+    <li><i>initial</i>: It is used to set the property of the box-shadow to its default value.</li>
+<br>
+    <li><i>none</i>: It is the default value that does not include any shadow property.</li>
+<br>
+  </ul>
+  <code>box-shadow: offset-x offset-y blur spread color |inset|inherit|initial|none;  </code><br>
+  <br>
+</section>
+
+<section id="CSS_Root" class="main-section">
+<header>CSS Root</header>
+<br>
+<p>This pseudo-class in CSS matches the root element of the document. It selects the highest-level parent in the document tree or DOM.</p>
+
+<p>In HTML, the 'html' element is always the root element. Although the :root is equivalent to html selector because both of them target the same element, but the :root selector has a higher specificity.</p>
+
+<p>Syntax: <br>
+<code>:root {  <br>
+    // CSS property  <br>
+  }  <br></code></p>
+<br>
+</section>
+
+<section id="CSS_Units" class="main-section">
+<header>CSS Units</header>
+<br>
+<p>There are various units in CSS to express the measurement and length. A CSS unit is used to determine the property size, which we set for an element or its content. The units in CSS are required to define the measurement such as margin: 20px; in which the px (or pixel) is the CSS unit. They are used to set margin, padding, lengths, and so on.</p>
+<p>The length unit in CSS is of two types:
+<ul>
+<br>
+<li><i>Absolute length</i>: <p>These are the fixed-length units, and the length expressed using the absolute units will appear as exactly that size. It is not recommended to use on-screen, because the size of the screen varies too much. So, the absolute units should be used when the medium of output is known, such as the print layout.</p><br>
+<p>Example: mm(millimeter), cm(centimeter), in(inches), pt(points), px(pixels), pc(picas).</p>
+</li>
+<br>
+<li><i>Relative length</i>: <p>Relative units are good to style the responsive site because they scale relative to the window size or the parent. They specify the length, which is relative to another length property.</p>
+<br>
+<p>Depending on the device, if the size of the screen varies too much, then the relative length units are the best because they scale better between the different rendering mediums. We can use the relative units as the default for the responsive units. It helps us to avoid update styles for different screen sizes.</p><br>
+<p>Examples: <br>
+<ul>
+      <li>em : It is relative to the font-size of the element.</li>
+      <li>ex : It is relative to the x-height of the font of the element. It is rarely used. The x-height is determined by the height of the lowercase letter 'x'.</li>
+      <li>ch : It is similar to the unit ex, but instead of using the height of the letter x, it measures the width of the integer "0" (zero).</li>
+      <li>rem	: It is the font-size of the root element.</li>
+      <li>vh : It is relative to the height of the viewport.
+        1vh = 1% or 1/100 of the height of the viewport.</li>
+      <li>vw : It is relative to the width of the viewport.
+        1vw = 1% or 1/100 of the width of viewport</li>
+      <li>vmin : It is relative to the smaller dimension of the viewport.
+        1vmin = 1% or 1/100 of the viewport's smaller dimension.</li>
+      <li>vmax : It is relative to the larger dimension of the viewport.
+        1vmax = 1% or 1/100 of the viewport's larger dimension.</li>
+      <li>%	: It is used to define the measurement as a percentage that is relative to another value.</li>
+</li>
+  </ul></p>
+<br>
+<p>Time Measurements: <br>
+  <ul>
+    <li>s : It is the duration of time in seconds.</li>
+    <li>ms : It is the duration of time in milliseconds.
+      1ms = 1/100 of a second.</li>
+</ul><br>
+Syntax: <code>  transition-duration:2s;  </code>
+</p>
+<br>
+<p>Angles: <br>
+  <ul>
+    <li>deg : It expresses the angles in degrees.</li>
+    <li>grad : It expresses the angles in gradians, i.e., 1/400 of a turn.</li>
+    <li>turn : It expresses the angles in turns, i.e., 360 degrees.</li>
+</ul><br>
+Syntax: <code>transform: rotate(30deg);</code></p>
+<br>
+</section>
+
+<section id="Transition" class="main-section">
+<header>Transition</header>
+<br>
+  <p>The CSS transitions are effects that are added to change the element gradually from one style to another, without using flash or JavaScript.
+You should specify two things to create CSS transition:
+    <ul>
+<br>
+      <li>The CSS property on which you want to add an effect.</li>
+      <li>The time duration of the effect.</li>
+  </ul>
+Syntax: <code>  -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */<br>   transition: width 1s;  <br>
+  </code></p>
+<br>
+</section>
+
+<section id="Box_Model" class="main-section">
+<header>Box Model</header>
+<br>
+<p>The box model comprises the set of properties that define parts of an element that take up space on a web page. The model includes the content area’s size (width and height) and the element’s padding, border, and margin. The properties include:
+<ol>
+<br>
+  <li><i>width and height</i> : The width and height of the content area.</li>
+  <li><i>padding</i> : The amount of space between the content area and the border.<br>
+    	<p>Properties:
+    <ul>
+      <li>padding-top</li>
+      <li>padding-right</li>
+      <li>padding-bottom</li>
+      <li>padding-left</li>
+    </ul><br>
+    <code>	p.content-header {  <br>
+	  padding: 6px 11px 4px 9px;  <br>
+      } <br></code>
+padding-top value (6px), the padding-right value (11px), the padding-bottom value (4px), and the padding-left value (9px) of the content.</p>
+</li>
+  <li><i>border</i> : The thickness and style of the border surrounding the content area and padding.</li>
+  <li><i>margin</i> : The amount of space between the border and the outside edge of the element.<br>
+    <p>	properties: <br>
+      <ul>
+        <li>margin-top</li>
+        <li>margin-right</li>
+        <li>margin-bottom</li>
+        <li>margin-left</li>
+    </ul>
+</li>
+  </ol>
+<br>
+</section>
+
+<section id="Changing_Box_Model" class="main-section">
+<header>Changing Box Model</header>
+<br>
+<p><ul>
+  <li>In the default box model, box dimensions are affected by border thickness and padding.</li>
+  <li>The box-sizing property controls the box model used by the browser.</li>
+  <li>The default value of the box-sizing property is content-box.</li>
+  <li>The value for the new box model is border-box. In this box model, the height and width of the box will remain fixed. The border thickness and padding will be included inside of the box, which means the overall dimensions of the box do not change.
+</li>
+  <li>The border-box model is not affected by border thickness or padding.</li>
+<br>
+  </ul>
+    <code>* { <br>
+  box-sizing: border-box; <br>
+} <br>
+  </code>
+  </p>
+<br>
+</section>
+
+<section id="FlexBox" class="main-section">
+<header>FlexBox</header>
+<br>
+<p>Flexible Box Layout or flexbox, a tool that greatly simplifies how to position elements.
+There are two important components to a flexbox layout: flex containers and flex items. A flex container is an element on a page that contains flex items. All direct child elements of a flex container are flex items. <i>To designate an element as a flex container, set the element’s display property to flex or inline-flex.</i></p>
+  
+<p>For an element to become a flex container, its display property must be set to flex.<br>
+<code>div.container { <br>
+  display: flex;   <br>
+} <br>
+  </code><br></p>
+  <p>In the example above, all divs with the class container are flex containers. If they have children, the children are flex items. A div with the declaration display: flex; will remain block level — no other elements will appear on the same line as it.
+However, it will change the behavior of its child elements. Child elements will not begin on new lines.</p>
+<p>Flexbox provides the inline-flex value for the display property, which allows us to create flex containers that are also inline elements.<br>
+properties:
+  <ul>
+    <br>
+    <li>justify-content: used to position items from left to right.<br>
+      Below are five commonly used values for the justify-content property:
+<ul>
+	<li>flex-start — all items will be positioned in order, starting from the left of the parent container, with no extra space between or before them.</li>
+	<li>flex-end — all items will be positioned in order, with the last item starting on the right side of the parent container, with no extra space between or after them.</li>
+	<li>center — all items will be positioned in order, in the center of the parent container with no extra space before, between, or after them.</li>
+	<li>space-around — items will be positioned with equal space before and after each item, resulting in double the space between elements.</li>
+	<li>space-between — items will be positioned with equal space between them, but no extra space before the first or after the last elements.</li>
+</ul></li>
+<br>
+    <li>align-items: The align-items property makes it possible to space flex items vertically. Below are five commonly used values for the align-items property:
+<ul>
+  <br>
+  <li>flex-start — all elements will be positioned at the top of the parent container.</li>
+  <li>flex-end — all elements will be positioned at the bottom of the parent container.</li>
+	<li>center — the center of all elements will be positioned halfway between the top and bottom of the parent container.</li>
+  <li>baseline — the bottom of the content of all items will be aligned with each other.</li>
+  <li>stretch — if possible, the items will stretch from top to bottom of the container.</li>
+      </ul></li>
+<br>
+    <li>flex-grow: The flex-grow property allows us to specify if items should grow to fill a container and also which items should grow proportionally more or less than others. This property is declared on flex-items.</li>
+<br>
+    <li>flex-shrink: The flex-shrink property can be used to specify which elements will shrink and in what proportions.  Margins are unaffected by flex-grow and flex-shrink. Keep in mind, minimum and maximum widths will take precedence over flex-grow and flex-shrink. As with flex-grow, flex-shrink will only be employed if the parent container is too small or the browser is adjusted.</li>
+<br>
+    <li>flex-basis: Another way of specifying the width of a flex item is with the flex-basis property. flex-basis allows us to specify the width of an item before it stretches or shrinks.</li>
+    <li>flex: The shorthand flex property provides a convenient way for specifying how elements stretch and shrink, while simplifying the CSS required. The flex property allows you to declare flex-grow, flex-shrink, and flex-basis all in one line.<br>
+<code> .small { <br>
+  flex: 1 2 100px;  <br>
+} <br>
+      </code><br>
+<p>In the example above, we use the flex property to declare the values for flex-grow, flex-shrink, and flex-basis (in that order) all in one line.</p>
+</li>
+<br>
+    <li>flex-wrap: <p>Sometimes, we don’t want our content to shrink to fit its container. Instead, we might want flex items to move to the next line when necessary. This can be declared with the flex-wrap property. The flex-wrap property can accept three values:</p>
+<ol>
+  <br>
+	<li>wrap — child elements of a flex container that don’t fit into a row will move down to the next line</li>
+	<li>wrap-reverse — the same functionality as wrap, but the order of rows within a flex container is reversed.</li>
+  <li>nowrap — prevents items from wrapping; this is the default value and is only necessary to override a wrap value set by a different CSS rule.</li>
+</ol>
+</li>
+    <li>align-content:  <p>align-items is for aligning elements within a single row. If a flex container has multiple rows of content, we can use align-content to space the rows from top to bottom.
+      Below are some of the more commonly used align-content values:</p>
+<ul>
+<br>
+<li>flex-start — all rows of elements will be positioned at the top of the parent container with no extra space between.</li>
+<li>flex-end — all rows of elements will be positioned at the bottom of the parent container with no extra space between.</li>
+<li>center — all rows of elements will be positioned at the center of the parent element with no extra space between.</li>
+<li>space-between — all rows of elements will be spaced evenly from the top to the bottom of the container with no space above the first or below the last.</li>
+<li>space-around — all rows of elements will be spaced evenly from the top to the bottom of the container with the same amount of space at the top and bottom and between each element.</li>
+<li>stretch — if a minimum height or no height is specified, the rows of elements will stretch to fill the parent container from top to bottom.</li>
+</ul><br>
+      <i>The align-content property is declared on flex containers.</i>
+</li>
+    <li>flex-direction: <p>Flex containers have two axes: a <i>main axis</i> and a <i>cross axis</i>. By default, the main axis is horizontal and the cross axis is vertical.<br>
+<p>The main axis is used to position flex items with the following properties:
+<ol>
+<br>
+  <li>justify-content</li>
+  <li>flex-wrap</li>
+  <li>flex-grow</li>
+  <li>flex-shrink</li>
+</ol></p>
+<br>
+<p>The cross axis is used to position flex items with the following properties:
+<ol>
+<br>
+  <li>align-items</li>
+  <li>align-content</li>
+  </ol></p>
+<br>
+<p>The main axis and cross axis are interchangeable. We can switch them using the flex-direction property. If we add the flex-direction property and give it a value of column, the flex items will be ordered vertically, not horizontally.</p>
+<br>
+<p>The flex-direction property can accept four values:
+<ul>
+<br>
+	<li>row — elements will be positioned from left to right across the parent element starting from the top left corner (default).</li>
+	<li>row-reverse — elements will be positioned from right to left across the parent element starting from the top right corner.</li>
+	<li>column — elements will be positioned from top to bottom of the parent element starting from the top left corner.</li>
+	<li>column-reverse — elements will be positioned from the bottom to the top of the parent element starting from the bottom left corner.</li>
+</ul></p><br>
+The flex-direction property is declared on flex containers.
+</li>
+<br>
+    <li>flex-flow: <p>Like the shorthand flex property, the shorthand flex-flow property is used to declare both the flex-wrap and flex-direction properties in one line. The flex-flow property is declared on flex containers.<br>
+<code>.container {  <br>
+  display: flex;  <br>
+  flex-flow: column wrap; <br>
+  } <br></code></li>
+  </ul>
+  </p>
+<br>
+</section>
+
+<section id="Grids" class="main-section">
+<header>Grids</header>
+<br>
+<p>The grid can be used to layout entire web pages. Whereas Flexbox is mostly useful for positioning items in a one-dimensional layout, CSS grid is most useful for two-dimensional layouts, providing many tools for aligning and moving elements across both rows and columns.</p>
+<br>
+<p>To set up a grid, you need to have both a grid container and grid items. The grid container will be a parent element that contains grid items as children and applies overarching styling and positioning to them. To turn an HTML element into a grid container, you must set the element’s display property to one of two values:<br>
+<ul>
+<br>
+  <li>grid — for a block-level grid.</li>
+  <li>inline-grid — for an inline grid.</li>
+  </ul>
+  </p>
+<ul>
+<br>
+  <li>Creating Columns: <p>By default, grids contain only one column. We can define the columns of our grid by using the CSS property grid-template-columns. <br>
+<code>.grid { <br>
+  display: grid;  <br>
+  width: 500px; <br>
+  grid-template-columns: 100px 200px; <br>
+} <br>
+    </code></p>
+<p>We can also define the size of our columns as a percentage of the entire grid’s width.<br>
+  <code> grid-template-columns: 20% 50%;</code><br></p></li>
+<br>
+<li>Creating Rows: <p>To specify the number and size of the rows, we are going to use the property grid-template-rows.
+This property is almost identical to grid-template-columns.<br>
+  <code> grid-template-rows: 10% 20% 600px;</code><br></p></li>
+<br>
+<li>Grid Template: <p>The shorthand property, grid-template, can replace the previous two CSS properties. <br>
+<code>.grid { <br>
+  display: grid;  <br>
+  width: 1000px;  <br>
+  height: 500px;  <br>
+  grid-template: 200px 300px / 20% 10% 70%; <br>
+  } <br></code></p>
+<br>
+<p>When using grid-template, the values before the slash will determine the size of each row. The values after the slash determine the size of each column.</p></li>
+<br>
+<li>Fraction(fr): <p>By using the fr unit, we can define the size of columns and rows as a fraction of the grid’s length and width. This unit was specifically created for use in CSS Grid. Using fr makes it easier to prevent grid items from overflowing the boundaries of the grid. <br>
+  <code> grid-template: 2fr 1fr 1fr / 1fr 3fr 1fr;<br></code>
+  </p></li>
+<br>
+<li>Repeat: <p>The properties that define the number of rows and columns in a grid can take a function as a value. repeat() is one of these functions. The repeat() function was created specifically for CSS Grid.<br>
+<code>.grid { <br>
+  display: grid;  <br>
+  width: 300px; <br>
+  grid-template-columns: repeat(3, 100px);  <br>
+  } <br></code>
+The repeat function will duplicate the specifications for rows or columns a given number of times.</p></li>
+<br>
+<li>minmax(): <p>This function is used to create  a grid to resize based on the size of your web browser.<br>
+<code>.grid { <br>
+  display: grid;  <br>
+  grid-template-columns: 100px minmax(100px, 500px) 100px;  <br>
+  } <br></code></p></li>
+<br>
+<li>Grid Gap: <p>The CSS properties row-gap and column-gap will put blank space between every row and column in the grid. It is important to note that grid gap properties does not add space at the beginning or end of the grid.<br>
+<code>column-gap: 10px; <br>
+  row-gap: 10px;  <br>
+  </code></p>
+<br>
+<p>Finally, there is a shorthand CSS property, gap, that can set the row and column gap at the same time. <br>
+<code>.grid { <br>
+  display: grid;  <br>
+  width: 320px; <br>
+  grid-template-columns: repeat(3, 1fr);  <br>
+  gap: 20px 10px; <br>
+  } <br></code>
+The example above will set the distance between rows to 20 pixels and the distance between columns to 10 pixels.</p></li>
+<br>
+<li>Grid Items: <p>Multiple Row Items. Using the CSS properties grid-row-start and grid-row-end, we can make single grid items take up multiple rows.<br>
+  <code>.item { <br>
+  grid-row-start: 1;  <br>
+  grid-row-end: 3;  <br>
+} <br>
+  </code><br></p>
+<p>In this example, the HTML element of class item will take up two rows in the grid, rows 1 and 2. The values that grid-row-start and grid-row-end accept are grid lines. Row grid lines and column grid lines start at 1 and end at a value that is 1 greater than the number of rows or columns the grid has.</p>
+<br>
+<p>The value for grid-row-start should be the row at which you want the grid item to begin. The value for grid-row-end should be one greater than the row at which you want the grid item to end.</p></li>
+<br>
+<li>Grid Row: <p>We can use the property grid-row as shorthand for grid-row-start and grid-row-end. The following two code blocks will produce the same output:<br>
+<code>.item { <br>
+  grid-row-start: 4;  <br>
+  grid-row-end: 6;  <br>
+} <br>
+<br>
+.item { <br>
+  grid-row: 4 / 6;  <br>
+} <br>
+  </code></p>
+<p>When an item spans multiple rows or columns using these properties, it will also include the gap if any exists. </p></li>
+<br>
+<li>Grid Column: <p>The previous three properties also exist for columns. grid-column-start, grid-column-end and grid-column work identically to the row properties. These properties allow a grid item to span multiple columns.</p>
+<br>
+<p>When using these properties, we can use the keyword span to start or end a column or row, relative to its other end. Look at how span is used in the code below:<br>
+<code>.item { <br>
+  grid-column: 4 / span 2;  <br>
+  } <br></code>
+This is telling the item element to begin in column four and take up two columns of space. So item would occupy columns four and five. </p></li>
+<br>
+<li>Grid Area: <p>This property will set the starting and ending positions for both the rows and columns of an item.<br>
+<code>.item { <br>
+  grid-area: 2 / 3 / 4 / span 5;  <br>
+  } <br></code>
+Grid-area takes four values separated by slashes. This is how grid-area will interpret those values.<br>
+  <ol>
+    <li>grid-row-start</li>
+    <li>grid-column-start</li>
+    <li>grid-row-end</li>
+    <li>grid-column-end</li>
+  </ol></p>
+<br>
+<p>Syntax: <code>grid-area:horizontal line to start at / vertical line to start at / horizontal line to end at / vertical line to end at;<br></code></p></li>
+<br>
+</ul>
+<br>
+<h3>Advanced Grid Properties</h3>
+<br>
+<ul>
+  <li>grid-template-areas: <p>The grid-template-areas property allows you to name sections of your web page to use as values in the grid-row-start, grid-row-end, grid-column-start,grid-column-end, and grid-area properties. This property is declared on grid containers.</p>
+<br>
+<code>  &ltdiv class="container"&gt <br>
+  &ltheader&gt Welcome! &lt/header&gt <br>
+  &ltnav&gt Links! &lt/nav&gt <br>
+  &ltsection class="info"&gt Info! &lt/section&gt <br>
+  &ltsection class="services"&gt Services! &lt/section&gt <br>
+  &ltfooter&gt Contact us! &lt/footer&gt  <br>
+&lt/div&gt  <br>
+  <br>
+
+.container {  <br>
+  display: grid;  <br>
+  max-width: 900px; <br>
+  position: relative; <br>
+  margin: auto; <br>
+  grid-template-areas: "head head"  <br>
+                       "nav nav" <br>
+                       "info services"  <br>
+                       "footer footer"; <br>
+  grid-template-rows: 300px 120px 800px 120px;  <br>
+  grid-template-columns: 1fr 3fr; <br>
+} <br>
+ <br>
+header {  <br>
+  grid-area: head;  <br>
+} <br>
+ <br>
+nav { <br>
+  grid-area: nav; <br>
+} <br>
+ <br>
+.info { <br>
+  grid-area: info;  <br>
+} <br>
+ <br>
+.services { <br>
+  grid-area: services;  <br>
+} <br>
+  <br>  
+footer {  <br>
+  grid-area: footer;  <br>
+}   <br>
+  <br></code></li>
+<br>
+<li>Overlapping Elements: <p>When overlapping elements, it is generally easiest to use the grid-area property with grid row names. Remember that grid-area will set the starting and ending positions for both the rows and columns of an item.</p></li>
+<br>
+<li>justify-items: <p>Justify-Items is a property that positions grid items along the inline, or row, axis. This means that it positions items from left to right across the web page. This property is declared on grid containers.
+justify-items accepts these values:<br>
+  <ul>
+    <br>
+    <li>start — aligns grid items to the left side of the grid area.</li>
+    <li>end — aligns grid items to the right side of the grid area.</li>
+    <li>center — aligns grid items to the center of the grid area.</li>
+    <li>stretch — stretches all items to fill the grid area.</li>
+  </ul></p><br>
+<code>main {  <br>
+  display: grid;  <br>
+  grid-template-columns: repeat(3, 400px);  <br>
+  justify-items: center;  <br>
+  } <br></code>
+</li>
+<br>
+<li>justify-content: <p>Justify-Content is used to position the entire grid along the row axis. This property is declared on grid containers.
+It accepts these values:<br>
+  <ul>
+    <br>
+    <li>start — aligns the grid to the left side of the grid container</li>
+    <li>end — aligns the grid to the right side of the grid container</li>
+    <li>center — centers the grid horizontally in the grid container</li>
+	<li>stretch — stretches the grid items to increase the size of the grid to expand horizontally across the container</li>
+	<li>space-around — includes an equal amount of space on each side of a grid element, resulting in double the amount of space between elements as there is before the first and after the last element</li>
+	<li>space-between — includes an equal amount of space between grid items and no space at either end</li>
+    <li>space-evenly — places an even amount of space between grid items and at either end</li>
+  </ul></p></li>
+<br>
+<li>align-items: <p>Align-Items is a property that positions grid items along the block, or column axis. This means that it positions items from top to bottom. This property is declared on grid containers.
+align-items accepts these values:<br>
+  <ul>
+    <br>
+    <li>start — aligns grid items to the top side of the grid area</li>
+    <li>end — aligns grid items to the bottom side of the grid area</li>
+    <li>center — aligns grid items to the center of the grid area</li>
+    <li>stretch — stretches all items to fill the grid area</li>
+  </ul></p></li>
+<br>
+<li>align-content: <p>Align-Content positions the rows along the column axis, or from top to bottom, and is declared on grid containers.
+It accepts these positional values:<br>
+  <ul>
+    <br>
+    <li>start — aligns the grid to the top of the grid container</li>
+	<li>end — aligns the grid to the bottom of the grid container</li>
+	<li>center — centers the grid vertically in the grid container</li>
+	<li>stretch — stretches the grid items to increase the size of the grid to expand vertically across the container</li>
+	<li>space-around — includes an equal amount of space on each side of a grid element, resulting in double the amount of space between elements as there is before the first and after the last element</li>
+	<li>space-between — includes an equal amount of space between grid items and no space at either end</li>
+	<li>space-evenly — places an even amount of space between grid items and at either end</li>
+  </ul></p></li>
+<br>
+<li>justify-self & align-self: <p>Justify-Self specifies how an individual element should position itself with respect to the row axis. This property will override justify-items for any item on which it is declared.</p>
+<br>
+<p>Align-Self specifies how an individual element should position itself with respect to the column axis. This property will override align-items for any item on which it is declared.</p>
+<br>
+<p>These properties are declared on grid items. They both accept these four properties:<br>
+  <ul>
+    <br>
+    <li>start — positions grid items on the left side/top of the grid area</li>
+    <li>end — positions grid items on the right side/bottom of the grid area</li>
+    <li>center — positions grid items on the center of the grid area</li>
+<li>stretch — positions grid items to fill the grid area (default)
+  align-self and justify-self accept the same values as align-items and justify-items. </li>
+  </ul></p></li>
+<br>
+<li>Implicit Grid: <p>The implicit grid is an algorithm built into the specification for CSS Grid that determines default behavior for the placement of elements when there are more than fit into the grid specified by the CSS.</p>
+  <br>
+<p>The default behavior of the implicit grid is as follows: items fill up rows first, adding new rows as necessary. New grid rows will only be tall enough to contain the content within them. </p>
+</li>
+<br>
+<li>grid-auto-rows & grid-auto-columns: <p>CSS Grid provides two properties to specify the size of grid tracks added implicitly: grid-auto-rows and grid-auto-columns. These properties are declared on grid containers.</p>
+<br>
+<p>grid-auto-rows specifies the height of implicitly added grid rows. grid-auto-columns specifies the width of implicitly added grid columns. If we did not specify grid-auto-rows, the rows would be auto-adjusted to the height of the content of the grid items.</p>
+<p>grid-auto-rows and grid-auto-columns accept the same values as their explicit counterparts, grid-template-rows and grid-template-columns:<br>
+  <ul>
+    <br>
+    <li>pixels (px)</li>
+    <li>percentages (%)</li>
+    <li>fractions (fr)</li>
+    <li>the repeat() function</li>
+  </ul></p></li>
+<br>
+<li>grid-auto-flow: <p>In addition to setting the dimensions of implicitly-added rows and columns, we can specify the order in which they are rendered.
+grid-auto-flow specifies whether new elements should be added to rows or columns, and is declared on grid containers.</p>
+<br>
+<p>grid-auto-flow accepts these values:<br>
+  <ul>
+    <br>
+	<li>row — specifies the new elements should fill rows from left to right and create new rows when there are too many elements (default)</li>
+	<li>column — specifies the new elements should fill columns from top to bottom and create new columns when there are too many elements</li>
+	<li>dense — this keyword invokes an algorithm that attempts to fill holes earlier in the grid layout if smaller elements are added</li>
+    <li>You can pair row or column with dense, like this: <code>grid-auto-flow: row dense;</code>.</li></ul></p>
+</li>
+<br>
+</ul>
+<br>
+</section>
+
+<section id="Media_Queries" class="main-section">
+<header>Media Queries</header>
+<br>
+  <p>Media Queries are a new technique introduced in CSS3 that change the presentation of content based on different viewport sizes. The viewport is a user's visible area of a web page, and is different depending on the device used to access the site.</p>
+  <br>
+<p>Media Queries consist of a media type, and if that media type matches the type of device the document is displayed on, the styles are applied. You can have as many selectors and styles inside your media query as you want.
+Here's an example of a media query that returns the content when the device's width is less than or equal to 100px:<br>
+<code>@media(max-width:100px) { <br>
+  /* CSS Rules */ <br>
+  } <br></code></p>
+<p>The following media query returns the content when the device's height is more than or equal to 350px: <br>
+<code>@media(min-height:350px) {  <br>
+  /* CSS Rules */ <br>
+  } <br></code>
+
+Remember, the CSS inside the media query is applied only if the media type matches that of the device being used.</p>
+
+<p>CSS Grid can be an easy way to make your site more responsive by using media queries to rearrange grid areas, change dimensions of a grid, and rearrange the placement of items.</p>
+<br>
+</section>
+
+<div class="back-to-top">
+  <button><a href="#CSS:_Cascading_Style_Sheets">Back To Top</a></button>
+</div>
+
+
+<!--<footer class="footer" id="footer">
+  Sources: 
+  <ul>
+    <li>Codecademy</li>
+    <li>javapoint.com</li>
+    <li>MDN Docs</li>
+    <li>W3Schools</li>
+  </ul>
+  <p class="copyright">safirangi © 2022</p>
+  </footer>-->
+
+  </main>
+</body>
