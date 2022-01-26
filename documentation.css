@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #403d39;
+}
+.navbar {
+  top: 0;
+  left: 0;
+  position: fixed;
+  border-right: 1px solid #333;
+  background: #252422;
+  width: 280px;
+  height: 100%;
+  min-width: 260px;
+  overflow: scroll;
+}
+.navbar ul li {
+  padding: 1em;
+  border-top: 1px solid #333;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: #ccc5b9;
+}
+.navbar ul li:hover {
+  background: #eb5e28;
+  cursor: pointer;
+   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
+.navbar header {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
+  padding: 0.7em;
+  color: #ccc5b9;
+}
+#main-doc header {
+  margin: 0;
+  text-align: left;
+  color: #fffcf2;
+  font-size: 2em;
+}
+#main-doc {
+  position: absolute;
+  margin: 1em 280px;
+  padding: 2em;
+  line-height: 1.5em;
+  color: #fffcf2;
+}
+#selectors header, p{
+  line-height: 1.5em;
+}
+#main-doc code {
+  color: #eb5e28;
+}
+#main-doc section {
+  border-bottom: 1px solid #ddd;
+  margin: 1em 0;
+}
+.back-to-top button {
+  height: 3em;
+  width: 10em;
+  bottom: 0;
+  float: right;
+  margin: 1em;
+  background: #eb5e28;
+  position: fixed;
+  border-radius: 0.4em;
+  border: 1px solid #ccc5b9;
+}
+.back-to-top a {
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  color: #ccc5b9;
+}
+.back-to-top a:hover {
+  color: #000;
+  background: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+.back-to-top button:hover {
+  background: #fff;
+  color: #000;
+}
+.back-to-top {
+  float: right;
+  bottom: 0;
+  margin: 0 0 0 1vw;
+}
+@media(min-height:350px) {
+  .navbar {padding-top: 15px;}
+  .navbar a {font-size: 18px;}
+}
+
+@media screen and (max-height: 450px) {
+.navbar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+.navbar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.navbar a:hover {
+  color: #f1f1f1;
+}
+.navbar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#main-doc {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+}
+
